@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(sed -i 's#assets/orn/bow.svg#assets/orn/brooch.svg#g' index.html experience.html projects.html)",
+      "Bash(sed -i 's#<img class=\"bow\" src=\"assets/orn/brooch.svg\"#<img class=\"brooch\" src=\"assets/orn/brooch.svg\"#' index.html)",
+      "Bash(sed -i 's#^/\\\\* bow tied on the pitch bubble \\\\*/#/* brooch pinned to the pitch bubble */#; s#^\\\\.speech \\\\.bow { position: absolute; right: -10px; top: -32px; width: 66px;#.speech .brooch { position: absolute; right: -8px; top: -30px; width: 46px;#; s#transform: rotate\\(9deg\\); pointer-events#transform: rotate\\(8deg\\); pointer-events#; s#^  \\\\.speech \\\\.bow { width: 54px; top: -26px; }#  .speech .brooch { width: 38px; top: -24px; }#; s#^\\\\.award img { width: auto; height: 17px; }#.award img { width: auto; height: 22px; margin-block: -3px; }#' styles.css)"
+    ]
+  }
+}

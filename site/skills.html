@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Skills | Jina Bagheri</title>
+  <meta name="description" content="Portfolio of Jina Bagheri, a Computer Science graduate focused on systems and infrastructure.">
+  <meta name="theme-color" content="#4b3848">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Ink sparkle used for the small manga-style marks -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="spark" viewBox="0 0 40 40">
+      <path d="M20 2C21 14 26 19 38 20 26 21 21 26 20 38 19 26 14 21 2 20 14 19 19 14 20 2Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+    </symbol>
+  </svg>
+
+  <header class="site-header">
+    <div class="wrap bar">
+      <a class="brand" href="/">Jina <em>Bagheri</em></a>
+      <nav class="nav" aria-label="Primary">
+        <a href="/">Home</a>
+        <a href="/experience">Experience</a>
+        <a href="/projects">Projects</a>
+        <a href="/skills" aria-current="page">Skills</a>
+      </nav>
+    </div>
+    <div class="band" role="presentation"></div>
+  </header>
+
+  <main class="wrap page">
+    <header class="page-head">
+          <img class="orn tl" src="assets/orn/corner.svg" alt="">
+          <img class="orn tr" src="assets/orn/corner.svg" alt="">
+          <img class="orn bl" src="assets/orn/corner.svg" alt="">
+          <img class="orn br" src="assets/orn/corner.svg" alt="">
+      <h1><em>Jina’s</em> Skills</h1>
+      <p class="lede">Systems, infrastructure, and tools.</p>
+    </header>
+
+    <section class="section" id="skills" aria-labelledby="skills-title">
+      <h2 class="section-title" id="skills-title">Skills</h2>
+      <p class="skills-hint">Hover over or tap a skill to see how comfortable I am with it.</p>
+      <!-- Proficiency: set data-level on each skill from 1 to 5
+           (1 Familiar, 2 Working knowledge, 3 Proficient, 4 Advanced, 5 Expert). -->
+      <dl class="skills">
+        <dt>Languages</dt>
+        <dd><ul class="tags">
+            <li data-level="4">JavaScript</li>
+            <li data-level="4">C#</li>
+            <li data-level="3">Python</li>
+            <li data-level="3">C</li>
+            <li data-level="3">C++</li>
+            <li data-level="3">Java</li>
+        </ul></dd>
+        <dt>Infrastructure</dt>
+        <dd><ul class="tags">
+            <li data-level="3">Linux</li>
+            <li data-level="2">AWS</li>
+            <li data-level="2">Kubernetes</li>
+            <li data-level="2">Docker</li>
+            <li data-level="3">F5 Load Balancer</li>
+            <li data-level="3">IBM Connect:Direct</li>
+        </ul></dd>
+        <dt>Developer tools</dt>
+        <dd><ul class="tags">
+            <li data-level="4">Git</li>
+            <li data-level="4">VS Code</li>
+            <li data-level="4">Visual Studio 2022</li>
+            <li data-level="3">Eclipse</li>
+        </ul></dd>
+        <dt>AI tools</dt>
+        <dd><ul class="tags">
+            <li data-level="4">Claude</li>
+            <li data-level="3">OpenAI Codex</li>
+        </ul></dd>
+      </dl>
+    </section>
+  </main>
+
+  <img class="divider foot-divider" src="assets/orn/divider.svg" alt="">
+
+  <footer class="site-footer">
+    <div class="wrap foot">
+      <a class="brand" href="/">Jina <em>Bagheri</em></a>
+      <nav aria-label="Contact">
+        <a href="https://www.linkedin.com/in/jina-bagheri-10926a298/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="mailto:bagherijina@gmail.com">Email</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script src="skills.js"></script>
+</body>
+</html>

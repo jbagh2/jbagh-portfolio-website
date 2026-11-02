@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Jina Bagheri | Portfolio</title>
+  <meta name="description" content="Portfolio of Jina Bagheri, a Computer Science graduate focused on systems and infrastructure.">
+  <meta name="theme-color" content="#4b3848">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Ink sparkle used for the small manga-style marks -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="spark" viewBox="0 0 40 40">
+      <path d="M20 2C21 14 26 19 38 20 26 21 21 26 20 38 19 26 14 21 2 20 14 19 19 14 20 2Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+    </symbol>
+  </svg>
+
+  <header class="site-header">
+    <div class="wrap bar">
+      <a class="brand" href="/">Jina <em>Bagheri</em></a>
+      <nav class="nav" aria-label="Primary">
+        <a href="/" aria-current="page">Home</a>
+        <a href="/experience">Experience</a>
+        <a href="/projects">Projects</a>
+        <a href="/skills">Skills</a>
+      </nav>
+    </div>
+    <div class="band" role="presentation"></div>
+  </header>
+
+  <main class="wrap">
+    <section class="hero" aria-label="Introduction">
+      <!-- Comic-page layout: big panel for your headshot, small overlapping panel for your own illustration -->
+      <div class="comic">
+        <!-- ornament SVGs live in assets/orn/. Swap or delete any of them. -->
+        <img class="crest" src="assets/orn/crest.svg" alt="">
+        <figure class="panel panel-main">
+          <div class="inner">
+            <!-- Save your photo as assets/headshot.jpg (portrait, roughly 3:4). This hides itself until the file exists. -->
+            <img src="assets/Jina_Grad.jpg" alt="Portrait of Jina Bagheri" width="600" height="800" onerror="this.remove()">
+          </div>
+        </figure>
+      <!--
+        <figure class="panel panel-mini">
+          <div class="inner">
+            <div class="ph" aria-hidden="true">
+              <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.4"><use href="#spark"/></svg>
+              <span>Your art</span>
+            </div>
+            < Save your illustration as assets/illustration.png (square works best). Remove this whole figure if you don't want it. >
+            <img src="assets/illustration.png" alt="" width="400" height="400" onerror="this.remove()">
+          </div>
+        </figure> -->
+    
+
+        <img class="drape" src="assets/orn/drape.svg" alt="">
+      </div>
+
+      <div class="intro">
+        <div class="namecard">
+          <img class="orn tl" src="assets/orn/corner.svg" alt="">
+          <img class="orn tr" src="assets/orn/corner.svg" alt="">
+          <img class="orn bl" src="assets/orn/corner.svg" alt="">
+          <img class="orn br" src="assets/orn/corner.svg" alt="">
+          <p class="eyebrow">Systems &amp; Infrastructure</p>
+          <h1><em>Jina</em> Bagheri</h1>
+          <p class="role">Computer Science graduate</p>
+          <div class="head-row">
+            <span class="chip">Open to relocation</span>
+            <!-- Opens the résumé in a new tab and also saves a copy (see script.js). -->
+            <a class="btn btn-outline" href="assets/BagheriResume-6.pdf" target="_blank" rel="noopener" data-download="Jina-Bagheri-Resume.pdf">Download résumé</a>
+          </div>
+        </div>
+
+        <!-- Elevator pitch: draft, edit freely -->
+        <div class="speech">
+          <img class="brooch" src="assets/orn/brooch.svg" alt="">
+          <p>
+              I'm a Computer Science graduate from the University of Nebraska-Lincoln with a strong interest in servers and systems infrastructure. This summer I interned on the Middleware team at First National Bank of Omaha, working with Linux, WebSphere Liberty, Apache HTTP Server, Connect:Direct, and F5 load balancers in a production environment. I'm looking for systems and infrastructure roles, including entry-level site reliability engineering (SRE).
+          </p>
+        </div>
+
+
+        <div class="actions">
+          <a class="actions-note" href="mailto:bagherijina@gmail.com">bagherijina@gmail.com</a>
+          <a class="btn-seal" href="mailto:bagherijina@gmail.com"><img src="assets/favicon.svg" alt="" width="24" height="24">Get in touch</a>
+        </div>
+      </div>
+    </section>
+
+    <img class="divider" src="assets/orn/divider.svg" alt="">
+
+    <section class="section" id="education" aria-labelledby="education-title">
+      <h2 class="section-title" id="education-title">Education</h2>
+      <div class="duo">
+        <article class="entry">
+          <div class="entry-head">
+            <div>
+              <h3>University of Nebraska-Lincoln</h3>
+              <p class="org">Bachelor of Science in Computer Science, Minor in Mathematics <span>· Lincoln, NE</span></p>
+            </div>
+          </div>
+          <div class="awards">
+            <span class="award"><img src="assets/orn/brooch-sm.svg" alt="">Graduated with High Distinction</span>
+            <span class="chip">GPA 3.9</span>
+          </div>
+          <p style="margin:16px 0 0"><span class="dates">August 2022 – May 2026</span></p>
+        </article>
+
+        <div class="cert">
+          <span class="kicker">Certification</span>
+          <h3>AWS Certified Cloud Practitioner</h3>
+          <span class="code">CLF-C02</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="explore-title">
+      <h2 class="section-title" id="explore-title">Explore</h2>
+      <div class="explore">
+        <a class="card" href="/experience">
+          <span class="num">01</span>
+          <h3>Experience</h3>
+          <p>Internships and past roles.</p>
+          <span class="go">View →</span>
+        </a>
+        <a class="card" href="/projects">
+          <span class="num">02</span>
+          <h3>Projects</h3>
+          <p>My capstone and side projects.</p>
+          <span class="go">View →</span>
+        </a>
+        <a class="card" href="/skills">
+          <span class="num">03</span>
+          <h3>Skills</h3>
+          <p>Systems, infrastructure, and tools.</p>
+          <span class="go">View →</span>
+        </a>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="now-title">
+      <h2 class="section-title" id="now-title">Currently</h2>
+      <ol class="now">
+        <li><span>01</span>Studying networking fundamentals, including TCP/IP, DNS, and load balancing.</li>
+        <li><span>02</span>Studying containerization with Docker and Kubernetes.</li>
+        <li><span>03</span>Learning AWS by hosting this site on it.</li>
+      </ol>
+    </section>
+  </main>
+
+  <img class="divider foot-divider" src="assets/orn/divider.svg" alt="">
+
+  <footer class="site-footer">
+    <div class="wrap foot">
+      <a class="brand" href="/">Jina <em>Bagheri</em></a>
+      <nav aria-label="Contact">
+        <a href="https://www.linkedin.com/in/jina-bagheri-10926a298/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="mailto:bagherijina@gmail.com">Email</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
