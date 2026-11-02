@@ -1,0 +1,46 @@
+name: Deploy site
+
+# Run on every push to main, or manually from the Actions tab
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+# id-token: write lets the workflow request an OIDC token from GitHub,
+# which AWS exchanges for temporary credentials. No stored access keys.
+permissions:
+  id-token: write
+  contents: read
+
+# If two pushes land close together, finish one deploy before starting the next
+concurrency:
+  group: deploy
+  cancel-in-progress: false
+
+env:
+  SITE_DIR: site          # folder in the repo that holds index.html, css, js, images
+  AWS_REGION: us-east-2   # region of the S3 bucket
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repo
+        uses: actions/checkout@v6
+
+      - name: Get temporary AWS credentials
+        uses: aws-actions/configure-aws-credentials@v6
+        with:
+          role-to-assume: ${{ vars.AWS_ROLE_ARN }}
+          aws-region: ${{ env.AWS_REGION }}
+
+      - name: Sync files to S3
+        # --delete removes files from the bucket that no longer exist in the repo
+        run: aws s3 sync "$SITE_DIR" "s3://${{ vars.S3_BUCKET }}" --delete
+
+      - name: Invalidate CloudFront cache
+        # "/*" clears every cached path so visitors get the new files right away
+        run: |
+          aws cloudfront create-invalidation \
+            --distribution-id "${{ vars.CLOUDFRONT_DISTRIBUTION_ID }}" \
+            --paths "/*"
