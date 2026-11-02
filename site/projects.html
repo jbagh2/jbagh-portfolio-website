@@ -118,9 +118,7 @@
           <ul class="bul">
             <li>Used Claude Code, Anthropic’s AI coding assistant, as a pair programmer: I set the creative direction and reviewed every change, while Claude drafted the layouts, restructured pages, and generated the vector ornaments with small Node.js scripts.</li>
             <li>Deploying to AWS as a static site on S3 behind CloudFront, with HTTPS from ACM, on a custom domain registered and managed through Cloudflare DNS.</li>
-            <li>Iterated on the design through rounds of feedback, with each change checked visually in headless Chrome at desktop and mobile sizes before it was kept.</li>
-            <li>Built an accessible skills proficiency meter that opens on hover, keyboard focus, or tap, using a small vanilla JavaScript module with no dependencies.</li>
-
+            <li>Built a continuous deployment workflow with GitHub Actions that syncs changed files to S3 and invalidates the CloudFront cache on every push to main, so changes go live right away.</li>
           </ul>
         </article>
       </div>
