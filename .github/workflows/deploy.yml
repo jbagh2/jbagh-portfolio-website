@@ -19,7 +19,7 @@ concurrency:
 
 env:
   SITE_DIR: site          # folder in the repo that holds index.html, css, js, images
-  AWS_REGION: us-east-2   # region of the S3 bucket
+  AWS_REGION: us-east-1   # region of the S3 bucket
 
 jobs:
   deploy:
